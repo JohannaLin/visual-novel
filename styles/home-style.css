@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+.nav-box ul li {
+  font-family: "roboto", sans-serif;
+  text-align: center;
+  display: inline-block;
+}
+
+.nav-box ul li a {
+  color: #f2f2df;
+  text-decoration: none;
+  padding: 10px 110px 10px 110px;
+  margin: -2px;
+}
+
+.active {
+}
+
+.blue-box {
+  background-color: #5671a6;
+}
+
+.light-blue-box {
+  background-color: #88a0bf;
+}
