@@ -30,23 +30,3 @@ html {
 .light-blue-box {
   background-color: #88a0bf;
 }
-
-div img.game-img {
-  display: block;
-  margin: 0 auto;
-  border-color: #365B73;
-  border-width: 15px;
-  border-style: solid;
-  border-radius: 15px;
-}
-
-.avatar-img {
-  display: block;
-  width: 280px;
-  position: absolute;
-  top: 385px; left: 30px;
-  border-color: #365B73;
-  border-width: 15px;
-  border-style: solid;
-  border-radius: 50%;
-}
