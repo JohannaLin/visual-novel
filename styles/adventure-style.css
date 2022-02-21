@@ -78,6 +78,7 @@ div img.game-img {
   border-style: solid;
   background-color: #88a0bf;
   width: 750px;
+  height: 95px;
   padding: 10px 10px;
   text-align: justify;
   position: absolute;
@@ -93,4 +94,38 @@ div img.game-img {
   border-width: 15px;
   border-style: solid;
   border-radius: 50%;
+}
+
+.button-shadow {
+  width: 770px;
+  height: 30px;
+  padding: 10px;
+  background-color: #365B73;
+  border-color: #365B73;
+  border-style: solid;
+  border-radius: 5px;
+  position: absolute;
+  top: 10px; left: 10px;
+}
+
+
+.options-button {
+  position: absolute;
+  top: 200px; left: 300px;
+}
+
+.button-style {
+  display: block;
+  color: #f2f2df;
+  text-decoration: none;
+  text-align: center;
+  width: 750px;
+  height: 25px;
+  padding: 10px;
+  margin: 30px 0px;
+  background-color: #7378AB;
+  border-color: #365B73;
+  border-style: double;
+  border-width: 10px;
+  border-radius: 5px;
 }
