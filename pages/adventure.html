@@ -13,34 +13,47 @@
       <nav class="navbar">
         <ul>
           <li><a class="blue-box" href="/"> Homepage </a></li>
-          <li><a class="light-blue-box" href="/pages/adventure.html"> Adventure </a></li>
-          <li><a class="blue-box" href="/pages/about-us.html"> About us </a></li>
-          <li><a class="light-blue-box" href="/pages/characters.html"> Characters </a></li>
+          <li class="current-page">
+            <a class="light-blue-box" href="/pages/adventure.html">
+              Adventure
+            </a>
+          </li>
+          <li>
+            <a class="blue-box" href="/pages/about-us.html"> About us </a>
+          </li>
+          <li>
+            <a class="light-blue-box" href="/pages/characters.html">
+              Characters
+            </a>
+          </li>
           <!-- A futuro me gustaría agregar una galería de arte conceptual-->
         </ul>
       </nav>
     </header>
 
     <div>
-      <img src="/images/600.jpg" alt="Pantalla del juego" />
-      <img
-        class="avatar-image"
-        src="/images/310.jpg"
-        alt="Imagen del avatar del juego"
-      />
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-        similique eaque libero debitis reprehenderit tempore reiciendis quam,
-        tenetur perspiciatis, modi laborum voluptatem iusto quo ipsam dolores
-        repellat facilis, possimus porro.
-      </p>
-    </div>
-
-    <div>
-      <ul>
-        <li><a href="#"> Opción del juego A</a></li>
-        <li><a href="#"> Opción del juego B</a></li>
-      </ul>
+      <div>
+        <img class="game-img" src="/images/600.jpg" alt="Pantalla del juego" />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+          similique eaque libero debitis reprehenderit tempore reiciendis quam,
+          tenetur perspiciatis, modi laborum voluptatem iusto quo ipsam dolores
+          repellat facilis, possimus porro.
+        </p>
+      </div>
+      <div>
+        <img
+          class="avatar-img"
+          src="/images/310.jpg"
+          alt="Imagen del avatar del juego"
+        />
+        <div class="option-box">
+          <ul>
+            <li><a href="#"> Opción del juego A</a></li>
+            <li><a href="#"> Opción del juego B</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </body>
 </html>
