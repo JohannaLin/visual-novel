@@ -45,6 +45,18 @@ div img.game-img {
   border-radius: 15px;
 }
 
+.dialogue-shadow {
+  border-color: #365B73;
+  border-width: 5px;
+  border-style: solid;
+  background-color: #365B73;
+  width: 750px;
+  height: 95px;
+  padding: 10px 10px;
+  position: absolute;
+  top: 520px; left: 360px;
+}
+
 .name-box {
   border-color: #365B73;
   border-width: 5px;
