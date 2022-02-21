@@ -4,6 +4,11 @@ html {
   background-color: #E1EDFF;
 }
 
+body {
+  font-family: "roboto", sans-serif;
+  color: #f2f2df;
+}
+
 .navbar ul li {
   font-family: "roboto", sans-serif;
   text-align: center;
@@ -29,4 +34,51 @@ html {
 
 .light-blue-box {
   background-color: #88a0bf;
+}
+
+div img.game-img {
+  display: block;
+  margin: 0 auto;
+  border-color: #365B73;
+  border-width: 15px;
+  border-style: solid;
+  border-radius: 15px;
+}
+
+.name-box {
+  border-color: #365B73;
+  border-width: 5px;
+  border-style: solid;
+  background-color: #456B8C;
+  width: 200px;
+  padding: 10px;
+  text-align: center;
+  font-family: "space mono", monospace;
+  font-style: italic;
+  font-weight: bold;
+  position: absolute;
+  top: 470px; left: 850px;
+}
+
+.dialogue-box {
+  border-color: #365B73;
+  border-width: 5px;
+  border-style: solid;
+  background-color: #88a0bf;
+  width: 750px;
+  padding: 10px 10px;
+  text-align: justify;
+  position: absolute;
+  top: 520px; left: 350px;
+}
+
+.avatar-img {
+  display: block;
+  width: 280px;
+  position: absolute;
+  top: 385px; left: 30px;
+  border-color: #365B73;
+  border-width: 15px;
+  border-style: solid;
+  border-radius: 50%;
 }
