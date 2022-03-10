@@ -1,28 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-html {
-  background-color: #E1EDFF;
-}
-
 body {
   font-family: "roboto", sans-serif;
   color: #f2f2df;
+  background-color: #E1EDFF;
 }
 
-.navbar ul li {
-  font-family: "roboto", sans-serif;
+.navbar {
   text-align: center;
+  display: flex;
+}
+
+.navbar-ulist {
+  list-style: none;
+}
+
+.navbar-list {
   display: inline-block;
 }
 
-.navbar ul li a {
+.navbar-links {
   color: #f2f2df;
   text-decoration: none;
   padding: 10px 110px 10px 110px;
-  margin: -2px;
 }
 
-.navbar ul li.current-page {
+.current-page {
   font-family: "space mono", monospace;
   font-weight: bold;
   font-size: large;
@@ -36,7 +39,7 @@ body {
   background-color: #88a0bf;
 }
 
-div img.game-img {
+.game-img {
   display: block;
   margin: 0 auto;
   border-color: #365B73;
@@ -89,7 +92,7 @@ div img.game-img {
   display: block;
   width: 280px;
   position: absolute;
-  top: 385px; left: 30px;
+  top: 395px; left: 30px;
   border-color: #365B73;
   border-width: 15px;
   border-style: solid;
@@ -107,7 +110,6 @@ div img.game-img {
   position: absolute;
   top: 10px; left: 10px;
 }
-
 
 .options-button {
   position: absolute;

@@ -5,33 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Visual Novel</title>
-    <link rel="stylesheet" href="/styles/adventure-style.css" />
+    <link rel="stylesheet" href="/pages/adventure/adventure-style.css" />
   </head>
 
   <body>
     <header>
       <nav class="navbar">
-        <ul>
-          <li><a class="blue-box" href="/"> Homepage </a></li>
-          <li class="current-page">
-            <a class="light-blue-box" href="/pages/adventure.html">
-              Adventure
-            </a>
-          </li>
-          <li>
-            <a class="blue-box" href="/pages/about-us.html"> About us </a>
-          </li>
-          <li>
-            <a class="light-blue-box" href="/pages/characters.html">
-              Characters
-            </a>
-          </li>
+        <ul class="navbar-ulist">
+          <li class="navbar-list"><a class="navbar-links blue-box" href="/"> Homepage </a></li>
+          <li class="navbar-list current-page"><a class="navbar-links light-blue-box" href="/pages/adventure.html">Adventure</a></li>
+          <li class="navbar-list"><a class="navbar-links blue-box" href="/pages/about-us.html"> About us </a></li>
+          <li class="navbar-list"><a class="navbar-links light-blue-box" href="/pages/characters.html">Characters</a></li>
           <!-- A futuro me gustaría agregar una galería de arte conceptual-->
         </ul>
       </nav>
     </header>
 
-    <div>
       <div>
         <img class="game-img" src="/images/600.jpg" alt="Pantalla del juego" />
         <div>
@@ -48,13 +37,11 @@
           </p>
         </div>
       </div>
-      <div>
         <img
           class="avatar-img"
           src="/images/310.jpg"
           alt="Imagen del avatar del juego"
         />
-      </div>
       <div class="options-button">
         <!--<div class="button-shadow"></div>-->
         <a class="button-style" href="#"> Opción del juego A</a>
