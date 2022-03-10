@@ -6,20 +6,24 @@ body {
   background-color: #E1EDFF;
 }
 
+.border {
+  --border: #365B73 solid;
+}
+
 .navbar {
   text-align: center;
   display: flex;
 }
 
-.navbar-ulist {
+.navbar__ulist {
   list-style: none;
 }
 
-.navbar-list {
+.navbar__list {
   display: inline-block;
 }
 
-.navbar-links {
+.navbar__links {
   color: #f2f2df;
   text-decoration: none;
   padding: 10px 110px 10px 110px;
@@ -31,39 +35,41 @@ body {
   font-size: large;
 }
 
-.blue-box {
+.box-color-primary {
   background-color: #5671a6;
 }
 
-.light-blue-box {
+.box-color-secondary{
   background-color: #88a0bf;
 }
 
-.game-img {
+.game {
+
+}
+
+.game__background-img {
   display: block;
   margin: 0 auto;
-  border-color: #365B73;
+  border: var(--border);
   border-width: 15px;
-  border-style: solid;
   border-radius: 15px;
 }
 
-.dialogue-shadow {
-  border-color: #365B73;
+.game__dialogue-shadow {
+  border: var(--border);
   border-width: 5px;
-  border-style: solid;
   background-color: #365B73;
   width: 750px;
   height: 95px;
   padding: 10px 10px;
   position: absolute;
-  top: 520px; left: 360px;
+  top: 520px;
+  left: 360px;
 }
 
-.name-box {
-  border-color: #365B73;
+.game__name-box {
+  border: var(--border);
   border-width: 5px;
-  border-style: solid;
   background-color: #456B8C;
   width: 200px;
   padding: 10px;
@@ -72,51 +78,53 @@ body {
   font-style: italic;
   font-weight: bold;
   position: absolute;
-  top: 470px; left: 850px;
+  top: 470px;
+  left: 850px;
 }
 
-.dialogue-box {
-  border-color: #365B73;
+.game__dialogue-box {
+  border: var(--border);
   border-width: 5px;
-  border-style: solid;
   background-color: #88a0bf;
   width: 750px;
   height: 95px;
   padding: 10px 10px;
   text-align: justify;
   position: absolute;
-  top: 520px; left: 350px;
+  top: 520px;
+  left: 350px;
 }
 
-.avatar-img {
+.game__avatar-img {
   display: block;
   width: 280px;
   position: absolute;
-  top: 395px; left: 30px;
-  border-color: #365B73;
+  top: 395px;
+  left: 30px;
+  border: var(--border);
   border-width: 15px;
-  border-style: solid;
   border-radius: 50%;
 }
 
-.button-shadow {
+.game__button-shadow {
   width: 770px;
   height: 30px;
   padding: 10px;
   background-color: #365B73;
-  border-color: #365B73;
-  border-style: solid;
+  border: var(--border);
   border-radius: 5px;
   position: absolute;
-  top: 10px; left: 10px;
+  top: 10px;
+  left: 10px;
 }
 
-.options-button {
+.game__button {
   position: absolute;
-  top: 200px; left: 300px;
+  top: 200px;
+  left: 300px;
 }
 
-.button-style {
+.game__button-style {
   display: block;
   color: #f2f2df;
   text-decoration: none;

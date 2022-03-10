@@ -11,22 +11,23 @@
   <body>
     <header>
       <nav class="navbar">
-        <ul class="navbar-ulist">
-          <li class="navbar-list"><a class="navbar-links blue-box" href="/"> Homepage </a></li>
-          <li class="navbar-list current-page"><a class="navbar-links light-blue-box" href="/pages/adventure.html">Adventure</a></li>
-          <li class="navbar-list"><a class="navbar-links blue-box" href="/pages/about-us.html"> About us </a></li>
-          <li class="navbar-list"><a class="navbar-links light-blue-box" href="/pages/characters.html">Characters</a></li>
+        <ul class="navbar__ulist">
+          <li class="navbar__list"><a class="navbar__links box-color-primary" href="/"> Homepage </a></li>
+          <li class="navbar__list current-page"><a class="navbar__links box-color-secondary" href="/pages/adventure/adventure.html">Adventure</a></li>
+          <li class="navbar__list"><a class="navbar__links box-color-primary" href="/pages/about-us/about-us.html"> About us </a></li>
+          <li class="navbar__list"><a class="navbar__links box-color-secondary" href="/pages/characters/characters.html">Characters</a></li>
           <!-- A futuro me gustaría agregar una galería de arte conceptual-->
         </ul>
       </nav>
     </header>
 
+    <div class="border">
       <div>
-        <img class="game-img" src="/images/600.jpg" alt="Pantalla del juego" />
+        <img class="game__background-img" src="/images/600.jpg" alt="Pantalla del juego" />
         <div>
-          <div class="dialogue-shadow"></div>
-          <h4 class="name-box">Characters name</h4>
-          <p class="dialogue-box">
+          <div class="game__dialogue-shadow"></div>
+          <h4 class="game__name-box">Characters name</h4>
+          <p class="game__dialogue-box">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
             similique eaque libero debitis reprehenderit tempore reiciendis
             quam, tenetur perspiciatis, modi laborum voluptatem iusto quo ipsam
@@ -37,16 +38,11 @@
           </p>
         </div>
       </div>
-        <img
-          class="avatar-img"
-          src="/images/310.jpg"
-          alt="Imagen del avatar del juego"
-        />
-      <div class="options-button">
-        <!--<div class="button-shadow"></div>-->
-        <a class="button-style" href="#"> Opción del juego A</a>
-        <a class="button-style" href="#"> Opción del juego B</a>
-      </div>
+        <img class="game__avatar-img" src="/images/310.jpg" alt="Imagen del avatar del juego"/>
+        <div class="game__button">
+          <a class="game__button-style" href="#"> Opción del juego A</a>
+          <a class="game__button-style" href="#"> Opción del juego B</a>
+        </div>
     </div>
   </body>
 </html>
