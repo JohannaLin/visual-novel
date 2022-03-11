@@ -6,17 +6,14 @@ body {
   background-color: #E1EDFF;
 }
 
-.border {
-  --border: #365B73 solid;
-}
-
 .navbar {
   text-align: center;
-  display: flex;
 }
 
 .navbar__ulist {
   list-style: none;
+  display: flex;
+  justify-content: center;
 }
 
 .navbar__list {
@@ -29,7 +26,7 @@ body {
   padding: 10px 110px 10px 110px;
 }
 
-.current-page {
+.navbar__links--current {
   font-family: "space mono", monospace;
   font-weight: bold;
   font-size: large;
@@ -39,20 +36,26 @@ body {
   background-color: #5671a6;
 }
 
-.box-color-secondary{
+.box-color-secondary {
   background-color: #88a0bf;
 }
 
-.game {
+.border {
+  --border: #365B73 solid;
+}
 
+.game {
+  display: flex;
+  justify-content: center;
 }
 
 .game__background-img {
-  display: block;
-  margin: 0 auto;
   border: var(--border);
   border-width: 15px;
   border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
 }
 
 .game__dialogue-shadow {
@@ -63,8 +66,8 @@ body {
   height: 95px;
   padding: 10px 10px;
   position: absolute;
-  top: 520px;
-  left: 360px;
+  top: 500px;
+  left: 350px;
 }
 
 .game__name-box {
@@ -78,7 +81,7 @@ body {
   font-style: italic;
   font-weight: bold;
   position: absolute;
-  top: 470px;
+  top: 450px;
   left: 850px;
 }
 
@@ -90,38 +93,28 @@ body {
   height: 95px;
   padding: 10px 10px;
   text-align: justify;
+  display: flex;
   position: absolute;
-  top: 520px;
-  left: 350px;
+  top: 500px;
+  left: 335px;
 }
 
 .game__avatar-img {
-  display: block;
   width: 280px;
-  position: absolute;
-  top: 395px;
-  left: 30px;
   border: var(--border);
   border-width: 15px;
   border-radius: 50%;
-}
-
-.game__button-shadow {
-  width: 770px;
-  height: 30px;
-  padding: 10px;
-  background-color: #365B73;
-  border: var(--border);
-  border-radius: 5px;
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 400px;
+  left: 15px;
 }
 
 .game__button {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
   position: absolute;
-  top: 200px;
-  left: 300px;
+  top: 150px;
 }
 
 .game__button-style {
