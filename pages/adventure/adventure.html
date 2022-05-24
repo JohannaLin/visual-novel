@@ -21,14 +21,14 @@
     </header>
 
     <div class="game">
-      <img class="border-blue game__background-img" src="/images/0141af056fb734940c2180d292c2fbc2.jpg" alt="Pantalla del juego" />
-      <img class="game__character-img" src="/images/Gato-bicolor.png" alt="Personaje en pantalla" />
+      <img id="background" class="border-blue game__background-img" src="/images/0141af056fb734940c2180d292c2fbc2.jpg" alt="Pantalla del juego" />
+      <img id="foreground" class="game__character-img" src="/images/Gato-bicolor.png" alt="Personaje en pantalla" />
       <div class="game__bottom-elements">
         <img class="border-blue game__avatar-img" src="/images/310.jpg" alt="Imagen del avatar del juego"/>
         <div>
           <div class="border- blue game__dialogue-shadow"></div>
-          <h4 class="border- blue game__name-box">Characters name</h4>
-          <p class="border-blue game__dialogue-box">
+          <h4 id="name" class="border- blue game__name-box">Characters name</h4>
+          <p id="dialog" class="border-blue game__dialogue-box">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
             similique eaque libero debitis reprehenderit tempore reiciendis
             quam, tenetur perspiciatis, modi laborum voluptatem iusto quo ipsam
@@ -44,5 +44,6 @@
           <a class="game__button-style" href="#"> Opción del juego B</a>
         </div>
     </div>
+    <script src="adventure.js"></script>
   </body>
 </html>

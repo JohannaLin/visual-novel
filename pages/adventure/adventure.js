@@ -1,8 +1,8 @@
-let screen = [
+const screen = [
   {
     id: "scene-0",
     name: "Traveler",
-    dialogue: [
+    dialog: [
       `Hi there! Are you the new worker, right? Welcome to "Hotel Del Luna", buddy! Hope you like your stay here, hahaha.
        Uh? Don't you know about "Hotel Del Luna? That isn't usual but let me tell you some things about this beautiful and magical place. You will thank me later.`,
       `"Hotel Del Luna" es una posada de lujo donde los más poderosos, ricos e influyentes suelen hospedarse. Se organizan fiestas privadas todas las noches donde solo unos pocos selectos son invitados.
@@ -18,7 +18,7 @@ let screen = [
   {
     id: "scene-1",
     name: "Innkeeper",
-    dialogue: [
+    dialog: [
       `Vaya vaya, así que este es el nuevo trabajador. ¡Bienvenido, muchacho! Espero que disfrutes de este espacio durante tu estadía trabajando.`,
       `Hahaha, ¿sorprendido? ¿Acaso esperabas otra imagen de mí? Eso es lo que dicen todos al conocerme, los rumores me pintan de una forma muy diferente, ¿verdad? Por suerte eso a mí no me molesta.
          Sería terrible si me molestase lo que el resto dice de mí, ¿no te parece, muchacho?`,
@@ -33,7 +33,7 @@ let screen = [
   {
     id: "scene-2",
     name: null,
-    dialogue: [
+    dialog: [
       `(No sé qué habrá sido esa última advertencia pero tendré que tener cuidado si no quiero tener problemas aquí.)`,
       `(Camino hacia mi habitación absorto en mis pensamientos, ordeno mi equipaje después de un largo viaje hasta el hotel y cuando dispongo a relajarme en la cama escucho un sonido extraño en la habitación.)`,
       `(Me acerco al lugar de donde provenía el ruido y me encuentro con una sorpresa...)`,
@@ -45,9 +45,25 @@ let screen = [
   {
     id: "scene-3",
     name: "Mysterious Character",
-    dialogue: [`zzz...`, `...`],
+    dialog: [`zzz...`, `...`],
     background:
       "/images/RenderInteriorConcept15-1920x1080-be448c2077a2576eb46d68d4d4100323.jpg",
     foreground: "/images/Gato-colorado-atigrado.png",
   },
 ];
+
+const backgroundImage = document.getElementById('background');
+const foregroundImage = document.getElementById('foreground');
+const characterName = document.getElementById('name');
+const dialogTexts = document.getElementById('dialog');
+
+function populateDom (backgroundImage, foregroundImage, characterName, dialogTexts) {
+  backgroundImage.setAttribute (src, backgroundImage);
+  foregroundImage.setAttribute(src, foregroundImage);
+  characterName.textValue = characterName;
+  dialogTexts.textValue = dialogTexts;
+}
+
+function populateDomBasedOnId (backgroundImage, foregroundImage, characterName, dialogTexts) {
+  
+}
