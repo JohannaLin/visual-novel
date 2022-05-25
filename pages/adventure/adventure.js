@@ -10,7 +10,8 @@ const screen = [
       `Te diré unos consejos, tómalos o déjalos, eso es tu propia decisión pero "el que avisa no triciona" y quien sabe... Quizás puedan llegar a serte muy útiles.`,
       `En primer lugar, ten cuidado con lo que ves y escuchas, no todo lo que sucede es lo que parece.
        En segundo lugar, escoge bien con quien te relacionas, en este sitio hay muchas personas que es mejor no tener de enemigo...
-       Y en tercer lugar, no importa qué suceda, no hables con la mercancía. NUNCA.``Bueno muchacho, es hora de que entres y presentarte ante el jefe. No vayas a decirle nada sobre lo que hablamos anteriormente, ¿entendido?`,
+       Y en tercer lugar, no importa qué suceda, no hables con la mercancía. NUNCA.`,
+      `Bueno muchacho, es hora de que entres y presentarte ante el jefe. No vayas a decirle nada sobre lo que hablamos anteriormente, ¿entendido?`,
     ],
     background: "/images/0141af056fb734940c2180d292c2fbc2.jpg",
     foreground: "/images/Gato-bicolor.png",
@@ -52,18 +53,25 @@ const screen = [
   },
 ];
 
-const backgroundImage = document.getElementById('background');
-const foregroundImage = document.getElementById('foreground');
-const characterName = document.getElementById('name');
-const dialogTexts = document.getElementById('dialog');
 
-function populateDom (backgroundImage, foregroundImage, characterName, dialogTexts) {
-  backgroundImage.setAttribute (src, backgroundImage);
-  foregroundImage.setAttribute(src, foregroundImage);
-  characterName.textValue = characterName;
-  dialogTexts.textValue = dialogTexts;
+
+const backgroundImageDom = document.getElementById('background');
+const foregroundImageDom = document.getElementById('foreground');
+const characterNameDom = document.getElementById('name');
+const dialogTextsDom = document.getElementById('dialog');
+
+let backgroundImage;
+let foregroundImage;
+let characterName;
+let dialogTexts;
+
+function populateDom () { //populate Dom Elements
+  backgroundImageDom.setAttribute ("src", `${backgroundImage}`);
+  foregroundImageDom.setAttribute("src", `${foregroundImage}`);
+  characterNameDom.textContent = characterName;
+  dialogTextsDom.textContent = dialogTexts;
 }
 
-function populateDomBasedOnId (backgroundImage, foregroundImage, characterName, dialogTexts) {
-  
+function populateDomBasedOnId () { // populate Dom Elements based on Id from JSON
+
 }
