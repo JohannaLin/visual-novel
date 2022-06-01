@@ -60,12 +60,7 @@ const foregroundImageDom = document.getElementById('foreground');
 const characterNameDom = document.getElementById('name');
 const dialogTextsDom = document.getElementById('dialog');
 
-let backgroundImage;
-let foregroundImage;
-let characterName;
-let dialogTexts;
-
-function populateDom () { //populate Dom Elements
+function populateDom (backgroundImage, foregroundImage, characterName, dialogTexts) { //populate Dom Elements
   backgroundImageDom.setAttribute ("src", `${backgroundImage}`);
   foregroundImageDom.setAttribute("src", `${foregroundImage}`);
   characterNameDom.textContent = characterName;
@@ -73,5 +68,5 @@ function populateDom () { //populate Dom Elements
 }
 
 function populateDomBasedOnId () { // populate Dom Elements based on Id from JSON
-
+  
 }
