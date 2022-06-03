@@ -1,6 +1,6 @@
 const screen = [
   {
-    id: "scene-0",
+    id: "0",
     name: "Traveler",
     dialog: [
       `Hi there! Are you the new worker, right? Welcome to "Hotel Del Luna", buddy! Hope you like your stay here, hahaha.
@@ -17,7 +17,7 @@ const screen = [
     foreground: "/images/Gato-bicolor.png",
   },
   {
-    id: "scene-1",
+    id: "1",
     name: "Innkeeper",
     dialog: [
       `Vaya vaya, así que este es el nuevo trabajador. ¡Bienvenido, muchacho! Espero que disfrutes de este espacio durante tu estadía trabajando.`,
@@ -32,7 +32,7 @@ const screen = [
     foreground: "/images/Gati-blanca.png",
   },
   {
-    id: "scene-2",
+    id: "2",
     name: null,
     dialog: [
       `(No sé qué habrá sido esa última advertencia pero tendré que tener cuidado si no quiero tener problemas aquí.)`,
@@ -44,7 +44,7 @@ const screen = [
     foreground: null,
   },
   {
-    id: "scene-3",
+    id: "3",
     name: "Mysterious Character",
     dialog: [`zzz...`, `...`],
     background:
@@ -67,6 +67,7 @@ function populateDom (backgroundImage, foregroundImage, characterName, dialogTex
   dialogTextsDom.textContent = dialogTexts;
 }
 
-function populateDomBasedOnId () { // populate Dom Elements based on Id from JSON
-  
+function populateDomBasedOnId (id) { // populate Dom Elements based on Id from JSON
+  const selectedScene = screen.find(scene => scene.id == id);
+  populateDom(selectedScene.background, selectedScene.foreground, selectedScene.name, selectedScene.dialog);
 }
