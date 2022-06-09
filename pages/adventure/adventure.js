@@ -53,8 +53,6 @@ const screen = [
   },
 ];
 
-
-
 const backgroundImageDom = document.getElementById('background');
 const foregroundImageDom = document.getElementById('foreground');
 const characterNameDom = document.getElementById('name');
@@ -62,7 +60,11 @@ const dialogTextsDom = document.getElementById('dialog');
 
 function populateDom (backgroundImage, foregroundImage, characterName, dialogTexts) { //populate Dom Elements
   backgroundImageDom.setAttribute ("src", `${backgroundImage}`);
-  foregroundImageDom.setAttribute("src", `${foregroundImage}`);
+  if (foregroundImage != null) {
+    foregroundImageDom.setAttribute("src", `${foregroundImage}`);
+  } else {
+    foregroundImageDom.remove();
+  };
   characterNameDom.textContent = characterName;
   dialogTextsDom.textContent = dialogTexts;
 }
