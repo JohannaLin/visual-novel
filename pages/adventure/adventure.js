@@ -57,19 +57,31 @@ const backgroundImageDom = document.getElementById('background');
 const foregroundImageDom = document.getElementById('foreground');
 const characterNameDom = document.getElementById('name');
 const dialogTextsDom = document.getElementById('dialog');
+let currentDialogIndex = 0;
+let selectedScene;
 
 function populateDom (backgroundImage, foregroundImage, characterName, dialogTexts) { //populate Dom Elements
   backgroundImageDom.setAttribute ("src", `${backgroundImage}`);
   if (foregroundImage != null) {
-    foregroundImageDom.setAttribute("src", `${foregroundImage}`);
+    if (foregroundImageDom.classList.contains("hidden") == true) { //si existe una clase CSS que oculta el elemento y existe foreground, quita la clase CSS
+      foregroundImageDom.classList.remove("hidden");
+    }
+    foregroundImageDom.setAttribute("src", `${foregroundImage}`); //cambia el src del elemento (cambia el foreground)
   } else {
-    foregroundImageDom.remove();
+    foregroundImageDom.classList.add("hidden"); //si no existe foreground se oculta el elemento utilizando una clase CSS
   };
   characterNameDom.textContent = characterName;
-  dialogTextsDom.textContent = dialogTexts;
+  dialogTextsDom.textContent = dialogTexts[currentDialogIndex];
 }
 
 function populateDomBasedOnId (id) { // populate Dom Elements based on Id from JSON
-  const selectedScene = screen.find(scene => scene.id == id);
+  selectedScene = screen.find(scene => scene.id == id);
   populateDom(selectedScene.background, selectedScene.foreground, selectedScene.name, selectedScene.dialog);
 }
+
+function advanceDialog () { //
+  currentDialogIndex = currentDialogIndex + 1;
+  dialogTextsDom.textContent = selectedScene.dialog[currentDialogIndex];
+}
+
+dialogTextsDom.addEventListener("click", advanceDialog)
