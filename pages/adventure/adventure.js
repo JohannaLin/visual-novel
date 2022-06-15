@@ -46,22 +46,23 @@ const screen = [
   {
     id: "3",
     name: "Mysterious Character",
-    dialog: [`zzz...`, `...`],
+    dialog: [`Zzz...`, `...`],
     background:
       "/images/RenderInteriorConcept15-1920x1080-be448c2077a2576eb46d68d4d4100323.jpg",
     foreground: "/images/Gato-colorado-atigrado.png",
   },
 ];
 
-const backgroundImageDom = document.getElementById('background');
-const foregroundImageDom = document.getElementById('foreground');
-const characterNameDom = document.getElementById('name');
-const dialogTextsDom = document.getElementById('dialog');
+const backgroundImageDom = document.getElementById("background");
+const foregroundImageDom = document.getElementById("foreground");
+const characterNameDom = document.getElementById("name");
+const dialogTextsDom = document.getElementById("dialog");
 let currentDialogIndex = 0;
 let selectedScene;
+let currentScene = 0;
 
-function populateDom (backgroundImage, foregroundImage, characterName, dialogTexts) { //populate Dom Elements
-  backgroundImageDom.setAttribute ("src", `${backgroundImage}`);
+function populateDom(backgroundImage, foregroundImage, characterName, dialogTexts) { //populate Dom Elements
+  backgroundImageDom.setAttribute("src", `${backgroundImage}`);
   if (foregroundImage != null) {
     if (foregroundImageDom.classList.contains("hidden") == true) { //si existe una clase CSS que oculta el elemento y existe foreground, quita la clase CSS
       foregroundImageDom.classList.remove("hidden");
@@ -69,19 +70,31 @@ function populateDom (backgroundImage, foregroundImage, characterName, dialogTex
     foregroundImageDom.setAttribute("src", `${foregroundImage}`); //cambia el src del elemento (cambia el foreground)
   } else {
     foregroundImageDom.classList.add("hidden"); //si no existe foreground se oculta el elemento utilizando una clase CSS
-  };
+  }
   characterNameDom.textContent = characterName;
   dialogTextsDom.textContent = dialogTexts[currentDialogIndex];
 }
 
-function populateDomBasedOnId (id) { // populate Dom Elements based on Id from JSON
-  selectedScene = screen.find(scene => scene.id == id);
-  populateDom(selectedScene.background, selectedScene.foreground, selectedScene.name, selectedScene.dialog);
+function populateDomBasedOnId(id) { // populate Dom Elements based on Id from JSON
+  selectedScene = screen.find((scene) => scene.id == id);
+  populateDom(
+    selectedScene.background,
+    selectedScene.foreground,
+    selectedScene.name,
+    selectedScene.dialog
+  );
 }
 
-function advanceDialog () { //
+function advanceDialog() { //
   currentDialogIndex = currentDialogIndex + 1;
   dialogTextsDom.textContent = selectedScene.dialog[currentDialogIndex];
+  if (currentDialogIndex > selectedScene.dialog.length - 1) {
+    currentScene = currentScene + 1;
+    currentDialogIndex = 0;
+    populateDomBasedOnId(currentScene);
+  }
 }
 
-dialogTextsDom.addEventListener("click", advanceDialog)
+dialogTextsDom.addEventListener("click", advanceDialog);
+
+populateDomBasedOnId(0)
