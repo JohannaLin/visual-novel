@@ -1,15 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 body {
   font-family: "roboto", sans-serif;
   color: #f2f2df;
-  background-color: #E1EDFF;
 }
 
 .navbar {
   display: flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
+  width: 100%;
+  background-color: #365b73;
 }
 
 .navbar__item {
@@ -19,7 +20,7 @@ body {
 .navbar__link {
   color: #f2f2df;
   text-decoration: none;
-  padding: 10px 110px 10px 110px;
+  padding: 10px 110px;
   display: flex;
   flex-grow: 1;
 }
@@ -30,35 +31,47 @@ body {
   font-size: large;
 }
 
-.box-color-primary {
-  background-color: #5671a6;
-}
-
-.box-color-secondary {
-  background-color: #88a0bf;
-}
-
 .border-blue {
-  border: #365B73 solid;
+  border: #365b73 solid;
 }
 
 .game {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
+  margin-top: 25px;
+  position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .game__background-img {
   border-width: 15px;
   border-radius: 15px;
+  width: 1080px;
   position: absolute;
+}
+
+.game__character-img {
+  width: 380px;
+  position: absolute;
+  top: 140px;
+}
+
+.hidden {
+  display: none;
+}
+
+.game__bottom-elements {
+  position: relative;
+  right: 645px;
+  bottom: 25px;
+  display: flex;
+  align-self: flex-start;
 }
 
 .game__dialogue-shadow {
   border-width: 5px;
-  background-color: #365B73;
+  background-color: #365b73;
   width: 750px;
   height: 95px;
   padding: 10px;
@@ -69,8 +82,9 @@ body {
 
 .game__name-box {
   border-width: 5px;
-  background-color: #456B8C;
+  background-color: #456b8c;
   width: 200px;
+  height: 60px;
   padding: 10px;
   text-align: center;
   font-family: "space mono", monospace;
@@ -119,9 +133,26 @@ body {
   height: 25px;
   padding: 10px;
   margin: 30px 0px;
-  background-color: #7378AB;
-  border-color: #365B73;
+  background-color: #7378ab;
+  border-color: #365b73;
   border-style: double;
   border-width: 10px;
   border-radius: 5px;
+}
+
+.game__debug-button {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1em;
+  position: absolute;
+  left: 0px;
+  bottom: 630px;
+}
+
+.game__debug-button-style {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #456b8c;
+  color: #f2f2df;
 }

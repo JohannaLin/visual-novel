@@ -9,35 +9,33 @@
   </head>
   <body>
     <header>
-      <nav>
-        <ul class="navbar">
-          <li class="navbar__item"><a class="navbar__link navbar__link--current box-color-primary" href="./"> Homepage </a></li>
-          <li clas="navbar__item"><a class="navbar__link box-color-secondary" href="./pages/adventure/adventure.html">Adventure</a></li>
-          <li class="navbar__item"><a class="navbar__link box-color-primary" href="./pages/about-us/about-us.html"> About us </a></li>
-          <li clas="navbar__item"><a class="navbar__link box-color-secondary" href="./pages/characters/characters.html">Characters</a></li>
-          <!-- Afuturo me gustaría agregar una galería de arte conceptual-->
-        </ul>
+      <nav class="navbar">
+        <div class="navbar__item"><a class="navbar__link navbar__link--current" href="/"> Homepage </a></div>
+        <div clas="navbar__item"><a class="navbar__link" href="/pages/adventure/adventure.html">Adventure</a></div>
+        <div class="navbar__item"><a class="navbar__link" href="/pages/about-us/about-us.html"> About us </a></div>
+        <div clas="navbar__item"><a class="navbar__link" href="/pages/characters/characters.html">Characters</a></div>
+        <!-- A futuro me gustaría agregar una galería de arte conceptual-->
       </nav>
     </header>
 
     <main>
-      <section>
-        <h2>My Visual Novel</h2>
-        <img
+      <section class="hero-section">
+        <img class="hero-section__img"
           src="./images/sinopsis-image.png"
           alt="Imagen promocional de la Visual Novel: Edificio majestuoso en medio de un cuerpo de agua fantasioso rodeado de barcos voladores"
         />
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam
-          temporibus, soluta porro enim sit aspernatur voluptate laudantium
-          quibusdam. Quo natus incidunt autem magni dicta veritatis temporibus
-          minima optio rem iure!
+        <h1 class="hero-section__title">My Visual Novel</h1>
+        <p class="hero-section__sinopsis">
+          Eres confiado para manejar el barco negro y traer la mercancía especial para los importantes huéspedes que se alojen en el hotel, muchas veces la mercancía puede hablar, pero te pagan por moverla, no por conversar con ella.
+          La mercancía se usa principalmente en las grandes fiestas a fin de mes, en donde se consume todo.
+          En extrañas situaciones, se descarta por la cascada si llegase a sobrar algo... o alguien...
+
         </p>
-        <a href="#"> START YOUR ADVENTURE! </a>
+        <a class="hero-section__button" href="/pages/adventure/adventure.html"> START YOUR ADVENTURE! </a>
       </section>
 
-      <section>
-        <div>
+      <section class="info-section">
+        <div class="info-section__card">
           <img src="./images/410.jpg" alt="Avatares de los autores" />
           <h3>About the authors</h3>
           <p>
@@ -48,7 +46,7 @@
           </p>
         </div>
 
-        <div>
+        <div class="info-section__card">
           <img src="./images/410-(1).jpg" alt="Imagen de los personajes" />
           <h3>Characters</h3>
           <p>

@@ -1,28 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-.navbar ul li {
+body {
   font-family: "roboto", sans-serif;
-  text-align: center;
+  color: #f2f2df;
+}
+
+.body__background {
+  background-image: url(/images/sinopsis-image-blur.png);
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #365b73;
+}
+
+.navbar__item {
   display: inline-block;
 }
 
-.navbar ul li a {
+.navbar__link {
   color: #f2f2df;
   text-decoration: none;
   padding: 10px 110px 10px 110px;
-  margin: -2px;
+  display: flex;
+  flex-grow: 1;
 }
 
-.navbar ul li.current-page {
+.navbar__link--current {
   font-family: "space mono", monospace;
   font-weight: bold;
   font-size: large;
-}
-
-.blue-box {
-  background-color: #5671a6;
-}
-
-.light-blue-box {
-  background-color: #88a0bf;
 }
