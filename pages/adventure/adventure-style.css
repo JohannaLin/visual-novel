@@ -139,3 +139,20 @@ body {
   border-width: 10px;
   border-radius: 5px;
 }
+
+.game__debug-button {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1em;
+  position: absolute;
+  left: 0px;
+  bottom: 630px;
+}
+
+.game__debug-button-style {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #456b8c;
+  color: #f2f2df;
+}

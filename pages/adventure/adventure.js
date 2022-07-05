@@ -57,17 +57,19 @@ const backgroundImageDom = document.getElementById("background");
 const foregroundImageDom = document.getElementById("foreground");
 const characterNameDom = document.getElementById("name");
 const dialogTextsDom = document.getElementById("dialog");
+const previousButton = document.getElementById("previous");
+const nextButton = document.getElementById("next");
 let currentDialogIndex = 0;
 let selectedScene;
 let currentScene = 0;
 
 function populateDom(backgroundImage, foregroundImage, characterName, dialogTexts) { //populate Dom Elements
-  backgroundImageDom.setAttribute("src", `${backgroundImage}`);
+  backgroundImageDom.setAttribute("src", backgroundImage);
   if (foregroundImage != null) {
-    if (foregroundImageDom.classList.contains("hidden") == true) { //si existe una clase CSS que oculta el elemento y existe foreground, quita la clase CSS
+    if (foregroundImageDom.classList.contains("hidden")) { //si existe una clase CSS que oculta el elemento y existe foreground, quita la clase CSS
       foregroundImageDom.classList.remove("hidden");
     }
-    foregroundImageDom.setAttribute("src", `${foregroundImage}`); //cambia el src del elemento (cambia el foreground)
+    foregroundImageDom.setAttribute("src", foregroundImage); //cambia el src del elemento (cambia el foreground)
   } else {
     foregroundImageDom.classList.add("hidden"); //si no existe foreground se oculta el elemento utilizando una clase CSS
   }
@@ -75,7 +77,7 @@ function populateDom(backgroundImage, foregroundImage, characterName, dialogText
   dialogTextsDom.textContent = dialogTexts[currentDialogIndex];
 }
 
-function populateDomBasedOnId(id) { // populate Dom Elements based on Id from JSON
+function populateDomBasedOnId(id) { //populate Dom Elements based on Id from JSON
   selectedScene = screen.find((scene) => scene.id == id);
   populateDom(
     selectedScene.background,
@@ -85,7 +87,7 @@ function populateDomBasedOnId(id) { // populate Dom Elements based on Id from JS
   );
 }
 
-function advanceDialog() { //
+function advanceDialog() { //avanza los diálogos recorriendo el array, al llegar al final, cambia la escena populando mediante la función populateDomBasedOnId
   currentDialogIndex = currentDialogIndex + 1;
   dialogTextsDom.textContent = selectedScene.dialog[currentDialogIndex];
   if (currentDialogIndex > selectedScene.dialog.length - 1) {
@@ -96,5 +98,3 @@ function advanceDialog() { //
 }
 
 dialogTextsDom.addEventListener("click", advanceDialog);
-
-populateDomBasedOnId(0)
