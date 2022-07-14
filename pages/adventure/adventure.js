@@ -57,8 +57,8 @@ const backgroundImageDom = document.getElementById("background");
 const foregroundImageDom = document.getElementById("foreground");
 const characterNameDom = document.getElementById("name");
 const dialogTextsDom = document.getElementById("dialog");
-const previousButton = document.getElementById("previous");
-const nextButton = document.getElementById("next");
+const backButton = document.getElementById("back");
+const forwardButton = document.getElementById("forward");
 let currentDialogIndex = 0;
 let selectedScene;
 let currentScene = 0;
@@ -98,3 +98,12 @@ function advanceDialog() { //avanza los diálogos recorriendo el array, al llega
 }
 
 dialogTextsDom.addEventListener("click", advanceDialog);
+
+function previousScene() { //carga la escena anterior a la actual, siguiendo el orden del array de escenas
+  currentScene = currentScene - 1;
+  populateDomBasedOnId(currentScene);
+}
+
+backButton.addEventListener("click", previousScene);
+
+populateDomBasedOnId(0)
