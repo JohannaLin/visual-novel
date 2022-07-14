@@ -106,4 +106,11 @@ function previousScene() { //carga la escena anterior a la actual, siguiendo el 
 
 backButton.addEventListener("click", previousScene);
 
+function forwardScene() { //carga la escena siguiente a la actual, siguiendo el orden del array de escenas
+  currentScene = currentScene + 1;
+  populateDomBasedOnId(currentScene);
+}
+
+forwardButton.addEventListener("click", forwardScene);
+
 populateDomBasedOnId(0)
