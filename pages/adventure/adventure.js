@@ -58,6 +58,7 @@ const foregroundImageDom = document.getElementById("foreground");
 const characterNameDom = document.getElementById("name");
 const dialogTextsDom = document.getElementById("dialog");
 const backButton = document.getElementById("back");
+const sceneNumber = document.getElementById("scene");
 const forwardButton = document.getElementById("forward");
 let currentDialogIndex = 0;
 let selectedScene;
@@ -85,6 +86,7 @@ function populateDomBasedOnId(id) { //populate Dom Elements based on Id from JSO
     selectedScene.name,
     selectedScene.dialog
   );
+  sceneNumber.value = currentScene;
 }
 
 function advanceDialog() { //avanza los diálogos recorriendo el array, al llegar al final, cambia la escena populando mediante la función populateDomBasedOnId
@@ -107,10 +109,18 @@ function previousScene() { //carga la escena anterior a la actual, siguiendo el 
 backButton.addEventListener("click", previousScene);
 
 function forwardScene() { //carga la escena siguiente a la actual, siguiendo el orden del array de escenas
+  currentDialogIndex = 0;
   currentScene = currentScene + 1;
   populateDomBasedOnId(currentScene);
 }
 
 forwardButton.addEventListener("click", forwardScene);
+
+/*function changeScene() { //cambia de escena colocando el número de escena a la cual se desea ir
+  let scene = ;
+  populateDomBasedOnId(scene);
+}
+
+sceneNumber.addEventListener(); */
 
 populateDomBasedOnId(0)
