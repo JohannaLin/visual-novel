@@ -116,11 +116,12 @@ function forwardScene() { //carga la escena siguiente a la actual, siguiendo el 
 
 forwardButton.addEventListener("click", forwardScene);
 
-/*function changeScene() { //cambia de escena colocando el número de escena a la cual se desea ir
-  let scene = ;
+function changeScene() { //cambia de escena colocando el número de escena a la cual se desea ir
+  let scene = sceneNumber.value;
+  currentScene = sceneNumber.value;
   populateDomBasedOnId(scene);
 }
 
-sceneNumber.addEventListener(); */
+sceneNumber.addEventListener("input", changeScene);
 
 populateDomBasedOnId(0)
