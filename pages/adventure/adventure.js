@@ -102,16 +102,20 @@ function advanceDialog() { //avanza los diálogos recorriendo el array, al llega
 dialogTextsDom.addEventListener("click", advanceDialog);
 
 function previousScene() { //carga la escena anterior a la actual, siguiendo el orden del array de escenas
-  currentScene = currentScene - 1;
-  populateDomBasedOnId(currentScene);
+  if (currentScene > 0) {
+    currentScene = currentScene - 1;
+    populateDomBasedOnId(currentScene);
+  }
 }
 
 backButton.addEventListener("click", previousScene);
 
 function forwardScene() { //carga la escena siguiente a la actual, siguiendo el orden del array de escenas
-  currentDialogIndex = 0;
-  currentScene = currentScene + 1;
-  populateDomBasedOnId(currentScene);
+  if (currentScene >= 0 && currentScene < screen.length - 1) {
+    currentDialogIndex = 0;
+    currentScene = currentScene + 1;
+    populateDomBasedOnId(currentScene);
+  }
 }
 
 forwardButton.addEventListener("click", forwardScene);
