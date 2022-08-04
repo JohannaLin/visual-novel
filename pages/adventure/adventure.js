@@ -111,7 +111,7 @@ function previousScene() { //carga la escena anterior a la actual, siguiendo el 
 backButton.addEventListener("click", previousScene);
 
 function forwardScene() { //carga la escena siguiente a la actual, siguiendo el orden del array de escenas
-  if (currentScene >= 0 && currentScene < screen.length - 1) {
+  if (currentScene < screen.length - 1) {
     currentDialogIndex = 0;
     currentScene = currentScene + 1;
     populateDomBasedOnId(currentScene);
@@ -121,9 +121,11 @@ function forwardScene() { //carga la escena siguiente a la actual, siguiendo el 
 forwardButton.addEventListener("click", forwardScene);
 
 function changeScene() { //cambia de escena colocando el número de escena a la cual se desea ir
-  let scene = sceneNumber.value;
   currentScene = sceneNumber.value;
-  populateDomBasedOnId(scene);
+  if (currentScene >= 0 && currentScene < screen.length) {
+    let scene = sceneNumber.value;
+    populateDomBasedOnId(scene);
+  }
 }
 
 sceneNumber.addEventListener("input", changeScene);
