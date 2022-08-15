@@ -57,8 +57,9 @@ const backgroundImageDom = document.getElementById("background");
 const foregroundImageDom = document.getElementById("foreground");
 const characterNameDom = document.getElementById("name");
 const dialogTextsDom = document.getElementById("dialog");
-const previousButton = document.getElementById("previous");
-const nextButton = document.getElementById("next");
+const backButton = document.getElementById("back");
+const sceneNumber = document.getElementById("scene");
+const forwardButton = document.getElementById("forward");
 let currentDialogIndex = 0;
 let selectedScene;
 let currentScene = 0;
@@ -85,6 +86,7 @@ function populateDomBasedOnId(id) { //populate Dom Elements based on Id from JSO
     selectedScene.name,
     selectedScene.dialog
   );
+  sceneNumber.value = currentScene;
 }
 
 function advanceDialog() { //avanza los diálogos recorriendo el array, al llegar al final, cambia la escena populando mediante la función populateDomBasedOnId
@@ -98,3 +100,32 @@ function advanceDialog() { //avanza los diálogos recorriendo el array, al llega
 }
 
 dialogTextsDom.addEventListener("click", advanceDialog);
+
+function previousScene() { //carga la escena anterior a la actual, siguiendo el orden del array de escenas
+  if (currentScene > 0) {
+    currentScene = currentScene - 1;
+    populateDomBasedOnId(currentScene);
+  }
+}
+
+backButton.addEventListener("click", previousScene);
+
+function forwardScene() { //carga la escena siguiente a la actual, siguiendo el orden del array de escenas
+  if (currentScene >= 0 && currentScene < screen.length - 1) {
+    currentDialogIndex = 0;
+    currentScene = currentScene + 1;
+    populateDomBasedOnId(currentScene);
+  }
+}
+
+forwardButton.addEventListener("click", forwardScene);
+
+function changeScene() { //cambia de escena colocando el número de escena a la cual se desea ir
+  let scene = sceneNumber.value;
+  currentScene = sceneNumber.value;
+  populateDomBasedOnId(scene);
+}
+
+sceneNumber.addEventListener("input", changeScene);
+
+populateDomBasedOnId(0)

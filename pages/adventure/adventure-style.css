@@ -141,12 +141,12 @@ body {
 }
 
 .game__debug-button {
+  width: 2000px;
   display: flex;
   justify-content: flex-start;
   gap: 1em;
   position: absolute;
   left: 0px;
-  bottom: 630px;
 }
 
 .game__debug-button-style {
