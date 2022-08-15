@@ -90,12 +90,14 @@ function populateDomBasedOnId(id) { //populate Dom Elements based on Id from JSO
 }
 
 function advanceDialog() { //avanza los diálogos recorriendo el array, al llegar al final, cambia la escena populando mediante la función populateDomBasedOnId
-  currentDialogIndex = currentDialogIndex + 1;
-  dialogTextsDom.textContent = selectedScene.dialog[currentDialogIndex];
-  if (currentDialogIndex > selectedScene.dialog.length - 1) {
-    currentScene = currentScene + 1;
-    currentDialogIndex = 0;
-    populateDomBasedOnId(currentScene);
+    currentDialogIndex = currentDialogIndex + 1;
+    dialogTextsDom.textContent = selectedScene.dialog[currentDialogIndex];
+    if (currentDialogIndex < selectedScene.dialog.length - 1) {
+      if (currentScene < screen.length - 1) {
+        currentScene = currentScene + 1;
+        currentDialogIndex = 0;
+        populateDomBasedOnId(currentScene);
+    }
   }
 }
 
