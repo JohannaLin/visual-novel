@@ -74,6 +74,11 @@ function populateDom(backgroundImage, foregroundImage, characterName, dialogText
   } else {
     foregroundImageDom.classList.add("hidden"); //si no existe foreground se oculta el elemento utilizando una clase CSS
   }
+
+  ele=document.getElementById("foreground")
+  ele.classList.remove("slide-right")
+  void ele.offsetWidth;
+  ele.classList.add("slide-right")
   characterNameDom.textContent = characterName;
   dialogTextsDom.textContent = dialogTexts[currentDialogIndex];
 }
